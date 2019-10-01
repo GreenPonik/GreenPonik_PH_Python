@@ -33,7 +33,7 @@ class GreenPonik_PH():
 				acidVoltageLine    = acidVoltageLine.strip('acidVoltage=')
 				_acidVoltage       = float(acidVoltageLine)
 		except :
-			reset()
+			self.reset()
 			sys.exit(1)
 	def readPH(self,voltage,temperature):
 		global _acidVoltage
