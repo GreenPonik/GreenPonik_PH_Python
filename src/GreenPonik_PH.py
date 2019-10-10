@@ -17,9 +17,11 @@ https://github.com/DFRobot/DFRobot_ADS1115/tree/master/RaspberryPi/Python
 import time
 import sys
 
-_temperature      = 25.0
-_acidVoltage      = 2032.44
-_neutralVoltage   = 1500.0
+_temperature = 25.0
+_acidVoltage = 2032.44
+_neutralVoltage = 1500.0
+
+
 class GreenPonik_PH():
 	def begin(self):
 		global _acidVoltage
