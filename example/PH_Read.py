@@ -1,6 +1,7 @@
+import time
 import sys
-sys.path.insert(0,'libs/DFRobot_ADS1115/RaspberryPi/Python/')
-sys.path.insert(0,'libs/GreenPonik_PH_Python/src/')
+sys.path.insert(0,'../libs/DFRobot_ADS1115/RaspberryPi/Python/')
+sys.path.insert(0,'../src/')
 
 
 from DFRobot_ADS1115 import ADS1115
@@ -33,5 +34,7 @@ def read_ph():
     return PH
 
 
-while True:
-    read_ph()
+if __name__ == "__main__":
+    while True:
+        read_ph()
+        time.sleep(1)

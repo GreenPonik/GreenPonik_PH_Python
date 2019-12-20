@@ -1,6 +1,7 @@
+import time
 import sys
-sys.path.insert(0,'libs/DFRobot_ADS1115/RaspberryPi/Python/')
-sys.path.insert(0,'libs/GreenPonik_PH_Python/src/')
+sys.path.insert(0,'../libs/DFRobot_ADS1115/RaspberryPi/Python/')
+sys.path.insert(0,'../src/')
 
 from DFRobot_ADS1115 import ADS1115
 from GreenPonik_PH import GreenPonik_PH
@@ -26,7 +27,11 @@ def calibration():
     ads1115.setGain(ADS1115_REG_CONFIG_PGA_6_144V)
     # Get the Digital Value of Analog of selected channel
     adc1 = ads1115.readVoltage(1)
+    print("calibration voltage: %.3f" % adc1['r'])
     return ph.calibration(adc1['r'])
 
 
-calibration()
+if __name__ == "__main__":
+    while True:
+        calibration()
+        time.sleep(1)
