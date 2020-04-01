@@ -207,3 +207,6 @@ while True:
 Writter by Mickael Lehoux, from [GreenPonik](https://www.greenponik.com), 2019
 
 based on [DFRobot library](https://github.com/DFRobot/DFRobot_PH/tree/master/RaspberryPi/Python)
+
+## support us
+[become a patreon](https://www.patreon.com/bePatron?u=32614023)
