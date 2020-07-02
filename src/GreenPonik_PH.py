@@ -40,7 +40,6 @@ class GreenPonik_PH():
                 print("get acid voltage from txt file: %d" % _acidVoltage)
         except:
             self.reset()
-            pass
 
     # def readPH(self,voltage,temperature):
     def readPH(self, voltage):
