@@ -49,8 +49,7 @@ class GreenPonik_PH():
                            3.0 - (_acidVoltage-1500.0)/3.0)
         intercept = 7.0 - slope*(_neutralVoltage-1500.0)/3.0
         _phValue = slope*(voltage-1500.0)/3.0+intercept
-        round(_phValue, 2)
-        return _phValue
+        return round(_phValue, 2)
 
     def calibration(self, voltage):
         if (voltage > 1322 and voltage < 1678):
